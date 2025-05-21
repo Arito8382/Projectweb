@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wedding Invitation</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&display=swap');
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(-45deg, #cce0f5, #e0f7fa, #d1ecf1, #f0f8ff);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #2c587d;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .invitation-container {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 40px 50px;
+      border-radius: 25px;
+      box-shadow: 0 10px 30px rgba(44, 88, 125, 0.2);
+      max-width: 500px;
+      text-align: center;
+      position: relative;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.5rem;
+      margin-bottom: 0;
+      color: #3a6e8f;
+      text-shadow: 1px 1px 2px rgba(58, 110, 143, 0.3);
+    }
+
+    h2 {
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      letter-spacing: 3px;
+      color: #33678f;
+    }
+
+    p.date-location {
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #447ba3;
+      margin-bottom: 30px;
+      letter-spacing: 2px;
+    }
+
+    p.message {
+      font-size: 1.1rem;
+      line-height: 1.5;
+      font-style: italic;
+      margin-bottom: 40px;
+      color: #3f5f7f;
+    }
+
+    .rsvp-button {
+      background: #5c9edc;
+      border: none;
+      color: white;
+      padding: 15px 40px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(92, 158, 220, 0.4);
+      transition: background 0.3s ease, transform 0.2s;
+    }
+
+    .rsvp-button:hover {
+      background: #3e85c2;
+      transform: scale(1.03);
+    }
+
+    .rsvp-form {
+      display: none;
+      margin-top: 30px;
+      text-align: left;
+    }
+
+    .rsvp-form label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 8px;
+      color: #4c7c9e;
+    }
+
+    .rsvp-form input[type="text"],
+    .rsvp-form input[type="email"] {
+      width: 100%;
+      padding: 10px 12px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      border: 1px solid #b0d0ea;
+      font-size: 1rem;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .rsvp-form button {
+      background: #5c9edc;
+      border: none;
+      color: white;
+      padding: 12px 30px;
+      font-size: 1rem;
+      font-weight: 700;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(92, 158, 220, 0.4);
+      transition: background 0.3s ease;
+    }
+
+    .rsvp-form button:hover {
+      background: #3e85c2;
+    }
+
+    .thank-you-message {
+      display: none;
+      margin-top: 30px;
+      font-weight: 700;
+      color: #2c587d;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+
+    .flower-top-left,
+    .flower-bottom-right {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      opacity: 0.15;
+      fill: #5c9edc;
+    }
+
+    .flower-top-left {
+      top: -20px;
+      left: -20px;
+      transform: rotate(15deg);
+    }
+
+    .flower-bottom-right {
+      bottom: -20px;
+      right: -20px;
+      transform: rotate(-15deg);
+    }
+
+    @media (max-width: 600px) {
+      .invitation-container {
+        padding: 30px 20px;
+        max-width: 90vw;
+      }
+      h1 {
+        font-size: 2.8rem;
+      }
+      h2 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="invitation-container" role="main" aria-labelledby="title">
+    <svg class="flower-top-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+      <path d="M32 2a6 6 0 1 1 0 12 6 6 0 0 1 0-12zm0 16a10 10 0 0 1 9.04 5.26 10 10 0 1 0-18.08 0A10 10 0 0 1 32 18z"/>
+    </svg>
+
+    <h1 id="title">Arisya Nurzahra &amp; Reyhan Gustiana</h1>
+    <h2>You're Invited</h2>
+    <p class="date-location">Sabtu, 10 Agustus 2024 Di Grand Garden Ballroom</p>
+    <p class="message"> Happily, we invite you to share happiness while we come together in marriage. Your presence will make our day really special </p>
+
+    <button class="rsvp-button" id="rsvpButton" aria-expanded="false" aria-controls="rsvpForm">RSVP</button>
+
+    <form class="rsvp-form" id="rsvpForm" aria-live="polite" aria-hidden="true">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required aria-required="true" placeholder="Enter your name" />
+      
+     <label>Be Present:</label>
+     <input type="radio" name="be present" value="yes" id="be present"> <label for="be present">Yes</label>
+     <input type="radio" name="be present" value="not" id="absent"> <label for="absent">Not</label>
+      
+      <br>
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" required aria-required="true" placeholder="Enter your email" />
+
+      <button type="submit">Send RSVP</button>
+    </form>
+
+    <p class="thank-you-message" id="thankYouMessage" tabindex="0">Terima kasih atas konfirmasi kehadiran Anda! Kami berharap dapat merayakannya bersama Anda.</p>
+
+    <svg class="flower-bottom-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+      <path d="M32 2a6 6 0 1 1 0 12 6 6 0 0 1 0-12zm0 16a10 10 0 0 1 9.04 5.26 10 10 0 1 0-18.08 0A10 10 0 0 1 32 18z"/>
+    </svg>
+  </div>
+
+  <script>
+    const rsvpButton = document.getElementById('rsvpButton');
+    const rsvpForm = document.getElementById('rsvpForm');
+    const thankYouMessage = document.getElementById('thankYouMessage');
+
+    rsvpButton.addEventListener('click', () => {
+      const isExpanded = rsvpButton.getAttribute('aria-expanded') === 'true';
+      if (isExpanded) {
+        rsvpForm.style.display = 'none';
+        rsvpForm.setAttribute('aria-hidden', 'true');
+        rsvpButton.setAttribute('aria-expanded', 'false');
+        thankYouMessage.style.display = 'none';
+      } else {
+        rsvpForm.style.display = 'block';
+        rsvpForm.setAttribute('aria-hidden', 'false');
+        rsvpButton.setAttribute('aria-expanded', 'true');
+        thankYouMessage.style.display = 'none';
+      }
+    });
+
+    rsvpForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      rsvpForm.style.display = 'none';
+      thankYouMessage.style.display = 'block';
+      thankYouMessage.focus();
+    });
+  </script>
+</body>
+</html>
